@@ -127,9 +127,7 @@ La aplicación utiliza JDBC para conectarse a MySQL.
 En `DBAccess.java` se deben configurar los datos de acceso a la base de datos:
 
 ```java
-String cadenaConexion = "jdbc:mysql://localhost:3306/videoclub";
-String usuario = "DB_USER";
-String password = "DB_PASSWORD";
+this.conexion = DriverManager.getConnection(cadenaConexion, "DB_User", "DB_Password");
 ```
 
 `DB_USER` y `DB_PASSWORD` son valores de ejemplo y deben sustituirse por el usuario y contraseña correspondientes a la instalación local de cada usuario.
@@ -137,8 +135,7 @@ String password = "DB_PASSWORD";
 Por ejemplo:
 
 ```java
-String usuario = "TU_USUARIO";
-String password = "TU_CONTRASEÑA";
+this.conexion = DriverManager.getConnection(cadenaConexion, "Tu_Usuario", "Tu_Contraseña");
 ```
 
 Cada instalación de MySQL puede utilizar unas credenciales diferentes.
