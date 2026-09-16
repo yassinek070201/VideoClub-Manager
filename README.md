@@ -169,8 +169,7 @@ El script se encargará de crear la base de datos, las tablas y los datos de eje
 Modificar `DBAccess.java`:
 
 ```java
-String usuario = "DB_USER";
-String password = "DB_PASSWORD";
+this.conexion = DriverManager.getConnection(cadenaConexion, "DB_User", "DB_Password");
 ```
 
 utilizando las credenciales de la instalación local.
